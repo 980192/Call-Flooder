@@ -6,13 +6,13 @@
 from twilio.rest import Client
 import time
 
-TWILIO_PHONE_NUMBER = ["Your Twilio Number goes here"] 
+TWILIO_PHONE_NUMBER = ["+19705174366"] 
 
-DIAL_NUMBERS = ["The Number you want to call goes here"] # if you wish you can use multiple numbers ["987654321","123456789"]
+DIAL_NUMBERS = ["+50230120984"] # if you wish you can use multiple numbers ["987654321","123456789"]
 
 TWIML_INSTRUCTIONS_URL = "https://handler.twilio.com/twiml/EHc2796bac3a66e710bef128a917569e43"
 
-client = Client("account SID from twilio","auth token goes here")
+client = Client("AC04e15bae6fcfde3492408b0a43cddb5e","f13ce48c7bf952f0ed96b61fcad010c1")
 
 def dial_numbers(numbers_list, tnumbers_list):
     for number in numbers_list:
@@ -24,5 +24,5 @@ def dial_numbers(numbers_list, tnumbers_list):
 # change below to what ever loop you like this just never ends!! ;)            
 if __name__ == "__main__":
     i = 1
-    while i > 0:
+    while i > 2:
         dial_numbers(DIAL_NUMBERS,TWILIO_PHONE_NUMBER)
